@@ -24,11 +24,14 @@ chmode +x easyocr_ov_install.sh
 ```bash
 python easyocr_ov_benchmark.py <PATH/TO/AN/INPUT/IMAGE> <LANGUAGE>
 ```
-Additianally you can specify an inference device for OpenVINO (default one is CPU) and a number of iterations (default is 10).
+Additianally you can specify an inference device for OpenVINO (default one is CPU) and a number of iterations (default is 10).  
 For example the following command runs 20 benchmarking iterations of English language recognition on Intel(R) Processor Graphics:
 ```bash
 python easyocr_ov_benchmark.py EasyOCR/examples/english.png en -n 20 -d GPU
 ```
-
+Running Chinese+English text recognition benchmarking on Intel(R) Discrete Graphics:
+```bash
+python easyocr_ov_benchmark.py EasyOCR/examples/chinese.jpg ch_sim en -d GPU.1
+```
 
 
