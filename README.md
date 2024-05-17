@@ -13,7 +13,7 @@ source env/bin/activate
 2. Clone the repo:
 ```bash
 git clone https://github.com/avbelova/easyocr_ov_benchmark.git
-cd easyocr_ov_banchmark
+cd easyocr_ov_benchmark
 chmode +x easyocr_ov_install.sh
 ```
 4. Install OpenVINO integration into EasyOCR using an installation script
