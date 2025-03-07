@@ -11,8 +11,11 @@ def benchmark(reader, img, niter):
         result = reader.readtext(img, detail=0)
         exec_time = perf_counter()-start_time
         time_ms = round(exec_time*1000,2)
-        print('Execution time: ',time_ms, "ms")
-        times.append(time_ms)
+        if i==0:
+            print('First inference took: ', time_ms, "ms")
+        else:
+            print('Execution time: ',time_ms, "ms")
+            times.append(time_ms)
         print("OCR result:")
         print(result)
     avg_time = round(np.average(times),2)
